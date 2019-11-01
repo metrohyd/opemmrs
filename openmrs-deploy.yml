@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
       - name: openmrs
-        image: shaikkhajaibrahim/gameoflife
+        image: openhmis/openmrs-docker
         ports:
         - containerPort: 8080
