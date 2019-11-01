@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: openmrs
-        image: shaikkhajaibrahim/openmrs
+        image: shaikkhajaibrahim/gameoflife
         ports:
         - containerPort: 8080
