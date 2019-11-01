@@ -5,11 +5,14 @@ metadata:
 spec:
   replicas: 3
   minReadySeconds: 30
-    strategy:
+  strategy:
     type: RollingUpdate
     rollingUpdate:
       maxUnavailable: 1
       maxSurge: 1
+  selector:
+    matchLabels:
+      app: openmrs
   template:
     metadata:
       labels:
