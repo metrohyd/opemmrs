@@ -1,10 +1,10 @@
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: jenkins-deploy
+  name: openmrs-deploy
 spec:
-  replicas: 2
-  minReadySeconds: 10
+  replicas: 3
+  minReadySeconds: 30
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -13,10 +13,10 @@ spec:
   template:
     metadata:
       labels:
-        app: jenkins
+        app: openmrs
     spec:
       containers:
-      - name: jenkins-pod
-        image: jenkins
+      - name: openmrs
+        image: shaikkhajaibrahim/openmrs
         ports:
-         -  containerPort: 8080
+        - containerPort: 8080
