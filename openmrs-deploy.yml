@@ -5,9 +5,7 @@ metadata:
 spec:
   replicas: 3
   minReadySeconds: 30
-  selector:
-    app: openmrs
-  strategy:
+    strategy:
     type: RollingUpdate
     rollingUpdate:
       maxUnavailable: 1
